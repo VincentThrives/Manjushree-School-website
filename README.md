@@ -1,6 +1,6 @@
 # Manjushree English School — Website
 
-Static marketing site for **Manjushree English School**, Sira — a private, co-educational English medium school established in 1995, following the Karnataka State Board curriculum.
+Static marketing site for **Manjushree English School**, Sira — a private, co-educational English medium school established in 1994-95, following the Karnataka State Board curriculum.
 
 **Location:** Balaji Nagar Road, Keshav Nagar, Sira, Tumakuru District, Karnataka – 572137
 
@@ -28,7 +28,7 @@ Or double-click `index.html` — all asset paths are relative, so `file://` work
 ## Before going live — fill these in
 
 - School office phone number (currently placeholder `+91 0000000000`)
-- Confirmed email address (currently `info@manjushreeschool.in`)
+- Confirmed email address (currently `siramanjushree@yahoo.com`)
 - Web3Forms access key in `contact.html`
 - Real names for the Management page and any published Results / Achievements
 
