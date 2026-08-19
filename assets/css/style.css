@@ -347,6 +347,34 @@ img { max-width: 100%; display: block; }
   animation: fadeUp .9s var(--ease-out) both;
 }
 
+/* Deity emblem crowning the hero — a small circular medallion above the eyebrow chip */
+.hero-deity {
+  align-self: flex-start;
+  width: 92px; height: 92px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  padding: 5px;
+  border: 3px solid #1c6b3a;
+  box-shadow:
+    0 12px 30px -10px rgba(0,0,0,.45),
+    0 0 0 4px rgba(255,255,255,.14),
+    inset 0 0 0 1px rgba(0,0,0,.08);
+  margin: 0 0 18px;
+  animation: fadeUp .8s var(--ease-out) both;
+  transition: transform .5s var(--ease-back), box-shadow .3s ease;
+}
+.hero-deity:hover {
+  transform: scale(1.06) rotate(-3deg);
+  box-shadow:
+    0 18px 40px -10px rgba(0,0,0,.6),
+    0 0 0 6px rgba(255,255,255,.22),
+    inset 0 0 0 1px rgba(0,0,0,.08);
+}
+@media (max-width: 760px) {
+  .hero-deity { width: 76px; height: 76px; margin-bottom: 14px; padding: 4px; border-width: 2px; }
+}
+
 .hero .hero-eyebrow {
   position: relative; overflow: hidden; white-space: nowrap; align-self: flex-start;
   background: #fff;
