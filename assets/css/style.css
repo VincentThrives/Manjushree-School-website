@@ -1265,15 +1265,17 @@ img { max-width: 100%; display: block; }
   .brand .crest.crest-deity { left: 44px; height: 36px; width: 36px; }
   .brand:hover .crest { transform: translateY(-50%) scale(1.1) rotate(-8deg); }
   .brand:hover .crest.crest-deity { transform: translateY(-50%) scale(1.1) rotate(8deg); }
-  /* on very narrow phones the two crests together crowd out the school name — hide the
-     decorative deity emblem below 560px and let the trust logo stand alone */
-  @media (max-width: 560px) {
-    .brand .crest.crest-deity { display: none; }
-    .brand > span { padding-left: 44px; padding-right: 44px; text-align: center; }
+  /* on phones the two crests together crowd out the school name — hide the
+     decorative deity emblem across the mobile-phone range and let the trust
+     logo stand alone. Tablets (760px+) still have room for both. */
+  @media (max-width: 760px) {
+    .brand .crest.crest-deity { display: none !important; }
+    .brand > span { padding-left: 52px; padding-right: 48px; text-align: center; }
   }
-  @media (max-width: 380px) {
+  @media (max-width: 400px) {
     .site-header .brand-name { font-size: 1rem; }
     .site-header .brand-sub  { font-size: .56rem; }
+    .brand > span { padding-left: 48px; padding-right: 44px; }
   }
   .brand > span { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; }
   .brand > span br { display: none; }
