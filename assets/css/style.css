@@ -347,23 +347,26 @@ img { max-width: 100%; display: block; }
   animation: fadeUp .9s var(--ease-out) both;
 }
 
-/* Deity emblem in the hero — tiny circular medallion (14px desktop / 10px mobile) */
+/* Deity emblem in the hero — circular medallion (80px desktop / 68px mobile) */
 .hero-deity {
   align-self: flex-start;
-  width: 14px; height: 14px;
+  width: 80px; height: 80px;
   object-fit: contain;
   border-radius: 50%;
   background: #fff;
-  padding: 1px;
-  border: 1px solid #1c6b3a;
-  box-shadow: 0 2px 6px -2px rgba(28,107,58,.55);
-  margin: 0 0 10px;
+  padding: 4px;
+  border: 2px solid #1c6b3a;
+  box-shadow: 0 10px 24px -8px rgba(28,107,58,.55);
+  margin: 0 0 16px;
   animation: fadeUp .8s var(--ease-out) both;
-  transition: transform .3s var(--ease-back), box-shadow .3s ease;
+  transition: transform .4s var(--ease-back), box-shadow .3s ease;
 }
-.hero-deity:hover { transform: scale(1.4); }
+.hero-deity:hover {
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 14px 30px -8px rgba(28,107,58,.7);
+}
 @media (max-width: 760px) {
-  .hero-deity { width: 10px; height: 10px; padding: 0; margin-bottom: 8px; }
+  .hero-deity { width: 68px; height: 68px; padding: 3px; margin-bottom: 14px; }
 }
 
 .hero .hero-eyebrow {
