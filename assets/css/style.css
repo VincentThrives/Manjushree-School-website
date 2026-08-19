@@ -858,13 +858,14 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
 }
 @media (max-width: 960px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }
-  .gallery figure.wide { grid-column: span 2; }
+  /* !important so inline `grid-template-columns` overrides on the HTML still collapse to 2 columns on tablets */
+  .gallery { grid-template-columns: repeat(2, 1fr) !important; }
+  .gallery figure.wide { grid-column: span 2 !important; }
   .gallery figure.tall { grid-row: auto; aspect-ratio: 3 / 4; }
 }
 @media (max-width: 480px) {
-  .gallery { grid-template-columns: 1fr; }
-  .gallery figure.wide { grid-column: auto; aspect-ratio: 4 / 3; }
+  .gallery { grid-template-columns: 1fr !important; }
+  .gallery figure.wide { grid-column: auto !important; aspect-ratio: 4 / 3; }
 }
 
 /* Two-video row for championship highlights */
@@ -1261,6 +1262,16 @@ img { max-width: 100%; display: block; }
   .brand .crest.crest-deity { left: 44px; height: 36px; width: 36px; }
   .brand:hover .crest { transform: translateY(-50%) scale(1.1) rotate(-8deg); }
   .brand:hover .crest.crest-deity { transform: translateY(-50%) scale(1.1) rotate(8deg); }
+  /* on very narrow phones the two crests together crowd out the school name — hide the
+     decorative deity emblem below 560px and let the trust logo stand alone */
+  @media (max-width: 560px) {
+    .brand .crest.crest-deity { display: none; }
+    .brand > span { padding-left: 44px; padding-right: 44px; text-align: center; }
+  }
+  @media (max-width: 380px) {
+    .site-header .brand-name { font-size: 1rem; }
+    .site-header .brand-sub  { font-size: .56rem; }
+  }
   .brand > span { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; }
   .brand > span br { display: none; }
   .site-header .brand-name { font-size: 1.12rem; letter-spacing: .005em; }
