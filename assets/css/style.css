@@ -347,8 +347,8 @@ img { max-width: 100%; display: block; }
   animation: fadeUp .9s var(--ease-out) both;
 }
 
-/* Deity emblem crowning the hero — same footprint as the trust crest used to have
-   in the header (54px desktop / 40px mobile) */
+/* Deity emblem in the hero — matched exactly to the school-logo footprint
+   (54px desktop / 40px mobile, same 2px border, same 3px padding, no extra ring) */
 .hero-deity {
   align-self: flex-start;
   width: 54px; height: 54px;
@@ -357,18 +357,14 @@ img { max-width: 100%; display: block; }
   background: #fff;
   padding: 3px;
   border: 2px solid #1c6b3a;
-  box-shadow:
-    0 6px 18px -6px rgba(0,0,0,.45),
-    0 0 0 3px rgba(255,255,255,.14);
+  box-shadow: 0 6px 18px -6px rgba(28,107,58,.55);
   margin: 0 0 14px;
   animation: fadeUp .8s var(--ease-out) both;
   transition: transform .5s var(--ease-back), box-shadow .3s ease;
 }
 .hero-deity:hover {
   transform: scale(1.1) rotate(-6deg);
-  box-shadow:
-    0 10px 24px -6px rgba(0,0,0,.6),
-    0 0 0 4px rgba(255,255,255,.22);
+  box-shadow: 0 10px 24px -6px rgba(28,107,58,.75);
 }
 @media (max-width: 760px) {
   .hero-deity { width: 40px; height: 40px; margin-bottom: 12px; padding: 2px; }
