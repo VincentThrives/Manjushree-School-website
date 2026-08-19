@@ -5,16 +5,15 @@
   publish = "."
   command = ""
 
-# Security + caching headers
+# ---------- Security + caching headers ----------
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options       = "SAMEORIGIN"
+    X-Frame-Options        = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy       = "strict-origin-when-cross-origin"
-    Permissions-Policy    = "geolocation=(), microphone=(), camera=()"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "geolocation=(), microphone=(), camera=()"
 
-# Long-cache immutable assets (images, videos, docs)
 [[headers]]
   for = "/assets/img/*"
   [headers.values]
@@ -30,7 +29,6 @@
   [headers.values]
     Cache-Control = "public, max-age=86400"
 
-# CSS and JS — shorter cache so updates propagate
 [[headers]]
   for = "/assets/css/*"
   [headers.values]
@@ -41,28 +39,55 @@
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
 
-# HTML — no cache so content updates go live on next visit
 [[headers]]
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Pretty URLs: /about → /about.html (optional, keeps compatibility)
+# ---------- Pretty-URL redirects ----------
+# /about → /about.html and so on (200 = rewrite, URL bar stays clean)
+
 [[redirects]]
-  from = "/about"      to = "/about.html"        status = 200
+  from = "/about"
+  to   = "/about.html"
+  status = 200
+
 [[redirects]]
-  from = "/academics"  to = "/academics.html"    status = 200
+  from = "/academics"
+  to   = "/academics.html"
+  status = 200
+
 [[redirects]]
-  from = "/results"    to = "/results.html"      status = 200
+  from = "/results"
+  to   = "/results.html"
+  status = 200
+
 [[redirects]]
-  from = "/achievements" to = "/achievements.html" status = 200
+  from = "/achievements"
+  to   = "/achievements.html"
+  status = 200
+
 [[redirects]]
-  from = "/sports"     to = "/sports.html"       status = 200
+  from = "/sports"
+  to   = "/sports.html"
+  status = 200
+
 [[redirects]]
-  from = "/facilities" to = "/facilities.html"   status = 200
+  from = "/facilities"
+  to   = "/facilities.html"
+  status = 200
+
 [[redirects]]
-  from = "/events"     to = "/events.html"       status = 200
+  from = "/events"
+  to   = "/events.html"
+  status = 200
+
 [[redirects]]
-  from = "/management" to = "/management.html"   status = 200
+  from = "/management"
+  to   = "/management.html"
+  status = 200
+
 [[redirects]]
-  from = "/contact"    to = "/contact.html"      status = 200
+  from = "/contact"
+  to   = "/contact.html"
+  status = 200
