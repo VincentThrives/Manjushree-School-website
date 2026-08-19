@@ -214,12 +214,15 @@ img { max-width: 100%; display: block; }
 }
 .contact-fab:hover .cf-label { opacity: 1; transform: translateY(-50%) translateX(0); }
 .cf-call  { background: #ffffff; color: #16a34a; }
-.cf-mail  { background: linear-gradient(135deg, var(--red-dark), var(--red)); }
+/* mail button: white background so the coloured envelope + red flap show clearly (matches modern mail-app icon aesthetic) */
+.cf-mail  { background: #ffffff; }
+.cf-mail .cf-ico { display: grid; place-items: center; padding: 0; }
 .cf-whats { background: #25d366; color: #fff; }
 .cf-insta { background: radial-gradient(circle at 30% 110%, #f9ce34 0%, #ee2a7b 45%, #6228d7 90%); color: #fff; }
 .contact-fab-btn svg { width: 22px; height: 22px; display: block; }
 .cf-call svg { color: #16a34a; }
-.cf-whats svg, .cf-insta svg, .cf-mail svg { color: #fff; }
+.cf-mail svg { width: 24px; height: 24px; }
+.cf-whats svg, .cf-insta svg { color: #fff; }
 @media (max-width: 760px) {
   .contact-fab { right: 10px; gap: 10px; top: 50%; }
   .contact-fab-btn { width: 40px; height: 40px; }
