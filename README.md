@@ -2,7 +2,7 @@
 
 Static marketing site for **Manjushree English School**, Sira — a private, co-educational English medium school established in 1994-95, following the Karnataka State Board curriculum.
 
-**Location:** Balaji Nagar Road, Keshav Nagar, Sira, Tumakuru District, Karnataka – 572137
+**Location:** Manjushree English School, Manjunatha Nagara, Sira, Tumakuru District, Karnataka – 572137
 
 ## Tech
 
